@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-[70vh]">
+    <!-- Chat Messages -->
+    <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4">
+        <!-- Welcome message -->
+        <div class="flex items-start">
+            <div class="bg-purple-100 p-3 rounded-lg max-w-3xl">
+                <p class="font-medium text-purple-800">Wine Concierge</p>
+                <p class="text-gray-800">Hello! I'm your Wine Concierge. I can help you with wine recommendations, answer questions about our winery, and provide current weather information. How can I assist you today?</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="border-t border-gray-200 p-4 bg-gray-50">
+        <form id="chat-form" class="flex space-x-2">
+            <input 
+                type="text" 
+                id="user-input" 
+                placeholder="Ask me about our wines, winery, or request the weather..." 
+                class="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                autocomplete="off"
+            >
+            <button 
+                type="submit" 
+                class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-6 rounded-lg transition duration-200 flex items-center"
+            >
+                <span>Send</span>
+                <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+        </form>
+        <div class="mt-2 text-xs text-gray-500 flex justify-between">
+            <div class="flex space-x-2">
+                <button class="text-purple-600 hover:text-purple-800" onclick="suggestQuery('What wines do you recommend?')">
+                    <i class="fas fa-wine-glass-alt"></i> Wine Recommendations
+                </button>
+                <button class="text-purple-600 hover:text-purple-800" onclick="suggestQuery('Tell me about your winery')">
+                    <i class="fas fa-store"></i> About Us
+                </button>
+            </div>
+            <button class="text-purple-600 hover:text-purple-800" onclick="suggestQuery('What\'s the weather like?')">
+                <i class="fas fa-cloud-sun"></i> Weather
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Loading Indicator (initially hidden) -->
+<div id="loading" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg shadow-xl">
+        <div class="flex items-center space-x-2">
+            <div class="w-5 h-5 border-2 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+            <span>Thinking...</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

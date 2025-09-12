@@ -1,0 +1,29 @@
+# Core
+fastapi>=0.104.1
+uvicorn>=0.24.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+python-weather>=1.0.4
+slowapi>=0.1.8
+limits>=3.1.0
+python-memcached>=1.61
+
+# Pydantic
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Local LLM and Search
+transformers>=4.30.0
+torch
+sentence-transformers
+accelerate
+langchain-community>=0.0.20
+langchain-core>=0.1.0
+duckduckgo-search>=4.1.1
+
+# Document Processing
+PyPDF2>=3.0.1
+python-docx>=1.0.1
+python-pptx>=0.6.21
+openpyxl>=3.1.2

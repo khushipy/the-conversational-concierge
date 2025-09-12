@@ -1,0 +1,82 @@
+/* Custom styles for Wine Concierge */
+
+/* Chat message styling */
+.message {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.message.user {
+    margin-left: auto;
+    background-color: #e9d5ff;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.message.bot {
+    margin-right: auto;
+    background-color: #f3f4f6;
+    border-bottom-left-radius: 0.25rem;
+}
+
+/* Smooth scrolling for chat */
+#chat-container {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.25rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #8b5cf6;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .message {
+        max-width: 90%;
+    }
+}
+
+/* Search result items */
+.search-result {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.search-result:hover {
+    background-color: #f9fafb;
+}
+
+.search-result h4 {
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+.search-result p {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-result a {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.search-result a:hover {
+    text-decoration: underline;
+}
