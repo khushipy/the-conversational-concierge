@@ -11,6 +11,10 @@ A sophisticated conversational AI agent for wine businesses that can answer ques
 - **Document Retrieval**: Smart document search for accurate information retrieval
 - **Rate Limiting**: Configurable rate limiting to prevent abuse and ensure fair usage
 
+## PREVIEW 
+<img width="1897" height="867" alt="image" src="https://github.com/user-attachments/assets/9ec5e391-bb9c-42f5-b8fa-468510024fcd" />
+
+
 ## 🚀 Quick Start
 
 ### Prerequisites
